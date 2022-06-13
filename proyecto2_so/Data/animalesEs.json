@@ -1,0 +1,42 @@
+[
+  {
+    "Id": 1,
+    "Nombre": "oso"
+  },
+  {
+    "Id": 2,
+    "Nombre": "castor"
+  },
+  {
+    "Id": 3,
+    "Nombre": "toro"
+  },
+  {
+    "Id": 4,
+    "Nombre": "camello"
+  },
+  {
+    "Id": 5,
+    "Nombre": "gato"
+  },
+  {
+    "Id": 6,
+    "Nombre": "puma"
+  },
+  {
+    "Id": 7,
+    "Nombre": "vaca"
+  },
+  {
+    "Id": 8,
+    "Nombre": "venado"
+  },
+  {
+    "Id": 9,
+    "Nombre": "perro"
+  },
+  {
+    "Id": 10,
+    "Nombre": "elefante"
+  }
+]
