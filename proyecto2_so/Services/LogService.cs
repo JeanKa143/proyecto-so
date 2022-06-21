@@ -20,12 +20,7 @@ public class LogService
         var url = httpContextAccessor.HttpContext.Request.GetDisplayUrl();
         var method = httpContextAccessor.HttpContext.Request.Method;
 
-        var nuevoHilo = new Thread(() =>
-        {
-            mutex.WaitOne();
-            LogMensaje($"{id}: {url} - {method}");
-            mutex.ReleaseMutex();
-        });
+        var nuevoHilo = new Thread(() => LogMensaje($"{id}: {url} - {method}"));
 
         nuevoHilo.Start();
     }
@@ -34,9 +29,11 @@ public class LogService
     {
         var rutaArchivo = $@"{env.ContentRootPath}/Files/log.txt";
 
+        mutex.WaitOne();
         using (var streamWriter = new StreamWriter(rutaArchivo, append: true))
         {
             streamWriter.WriteLine(mensaje);
         }
+        mutex.ReleaseMutex();
     }
 }
