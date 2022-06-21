@@ -2,6 +2,7 @@ using Microsoft.Extensions.FileProviders;
 using proyecto2_so.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.WebHost.UseUrls("http://*:5024");
 
 // Add services to the container.
 builder.Services.AddControllers();
